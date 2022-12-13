@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+:root {
+  --nav-color: #2f8f9d;
+  --body-color: #82dbd8;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: var(--body-color);
+}
+.navbar {
+  display: flex;
+  background-color: var(--nav-color);
+  height: 2.5rem;
+  padding: 1rem;
+}
+.logo-container {
+  flex: 1;
+  display: flex;
+  padding-left: 3rem;
+}
+.product-logo {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  height: 2rem;
+  width: 6rem;
+}
+.logo {
+  height: 1.8rem;
+  width: 1.8rem;
+  color: rgb(255, 255, 255);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+}
+.search-box {
+  height: 1.5rem;
+  width: 20rem;
+  font-size: 0.9rem;
+  padding-left: 0.5rem;
+  outline: none;
+  border-radius: 1.5rem;
+  background-color: rgb(211, 211, 211);
+  border: 0.1rem solid rgb(211, 211, 211);
+}
+.search {
+  height: 1.7rem;
+  display: flex;
+  width: 20.7rem;
+  background-color: rgb(211, 211, 211);
+  border: 0.1rem solid rgb(211, 211, 211);
+  border-radius: 1.5rem;
+}
+.logo {
+  text-decoration: none;
+}
+.search-box::-webkit-search-cancel-button {
+  display: none;
+}
+.search-icon {
+  height: 1.5rem;
+  cursor: pointer;
+  width: 1.5rem;
+}
+.side-bar {
+  background-color: var(--nav-color);
+  width: 15rem;
+  display: block;
+  height: 100rem;
+}
+.side {
+  color: white;
+  display: block;
+  width: 15rem;
+  padding: 1.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.side:hover {
+  color: black;
+  padding: 1.5rem;
+  width: 12rem;
+  background-color: rgb(0, 255, 255);
+}
+.main-page {
+  display: flex;
+}
+
+.add-items {
+  padding: 0.8rem;
+  background-color: rgb(47, 143, 157);
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  width: 6.3rem;
+  margin: 2.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+#inventory {
+  position: relative;
+  padding-left: 1.5rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.item-name {
+  color: white;
+  padding-left: 1rem;
+}
+.items {
+  height: 23rem;
+  width: 15rem;
+  margin-left: 3rem;
+  background-color: rgb(59, 172, 182);
+  border-radius: 0.2rem;
+  margin-bottom: 2.5rem;
+}
+.dialog {
+  position: fixed;
+  height: 200px;
+  top: 340px;
+  width: 400px;
+  background-color: rgb(212, 212, 212);
+  left: 600px;
+}
+.stock {
+  padding: 0.3rem 1rem;
+  color: lightgreen;
+}
+.add-image {
+  padding: 30px;
+}
+.home-continer {
+  padding-left: 6rem;
+}
+.revenue {
+  padding-top: 3rem;
+}
+.revenue,
+.items-left,
+.requires {
+  height: 300px;
+}
+.image-item {
+  height: 15rem;
+  width: 15rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+.price {
+  color: rgb(255, 255, 255);
+  display: flex;
+  padding: 0.5rem 1rem;
+}
+.demo_price {
+  flex: 1;
+}
+.inr {
+  flex: 1;
+}
+.amount {
+  margin-top: 2px solid rgb(0, 0, 0);
+  display: flex;
+}
+.total {
+  flex: 1;
+}
+.rupees {
+  flex: 1;
+}
+.bill-continer {
+  margin: 15rem 0 0 25rem;
+  width: 30rem;
+  height: 23rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+}
+.bill-heading {
+  padding-top: 2rem;
+  padding-left: 13rem;
+}
+.bill-receipt {
+  padding: 5rem;
+  padding-left: 10rem;
+}
+.amount {
+  padding-top: 2rem;
+  border-top: 0.1rem solid rgb(0, 0, 0);
+  padding-left: 7rem;
+  margin: 0 3rem 0 3rem;
+}
+.nav-items {
+  text-decoration: none;
+  padding: 0.7rem;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+.nav-items:hover {
+  color: rgb(0, 0, 0);
+}
+.signin {
+  text-decoration: none;
+  padding: 0.5rem;
+  font-weight: bold;
+  background-color: #b3e8e5;
+  color: rgb(255, 255, 255);
+  border-radius: 0.4rem;
+}
+.signin:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(155, 255, 203);
+}
+.home-heading {
+  padding: 5rem 10rem 10rem 3rem;
+  width: 50rem;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+}
+.home {
+  background-color: rgb(138, 43, 226);
+  height: 25rem;
+}
+.choices {
+  margin-top: 5rem;
+  margin-left: 10rem;
+}
+.siginin-heading {
+  padding: 20rem;
+}
+.seller,
+.customer {
+  border: 2px solid rgb(0, 0, 0);
+  padding: 3rem;
+  padding-top: 3rem;
+  height: 12rem;
+
+  border-radius: 3rem;
+}
+.store,
+.people {
+  height: 10rem;
+  width: 10rem;
+}
+.choices-checbox {
+  display: flex;
+  padding: 3rem;
+  padding-left: 15rem;
+}
+.siginin-choice {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+}
+.customer-choice {
+  padding: 0.6rem;
+  font-size: 1.5rem;
+}
+.signin-seller {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding-left: 8rem;
+}
+.signin-customer {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding-left: 6rem;
+}
+.choice-container {
+  padding-top: 5rem;
+  padding-left: 7rem;
+}
+.login-box {
+  margin: 17%;
+  margin-left: 35%;
+  background-color: rgb(255, 255, 255);
+  height: 17rem;
+  width: 26.2rem;
+  border-radius: 1rem;
+}
+.mail,
+.pass {
+  padding: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.mail-inputbox,
+.password-inputbox {
+  height: 1.5rem;
+  width: 20rem;
+  outline: none;
+}
+.mail-container,
+.pass-container {
+  padding-left: 1.5rem;
+}
+
+.log-in {
+  background-color: rgb(138, 43, 226);
+  color: rgb(255, 255, 255);
+  padding: 0.5rem;
+  margin: 1rem;
+  width: 3rem;
+  border-radius: 0.4rem;
+  margin-left: 19rem;
+}
+
+.log-in:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(138, 43, 226);
+  border: 0.1rem solid rgb(138, 43, 226);
+}
+.login-button {
+  text-decoration: none;
+}
+.sign-in,
+.explore-more {
+  margin: 1rem 0 2rem 5rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(135, 206, 235);
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+}
+.sign-in:hover,
+.explore-more:hover {
+  background-color: rgb(138, 43, 226);
+  color: rgb(163, 229, 255);
+  border: 2px solid rgb(163, 229, 255);
+}
+.explore-more {
+  margin: 0;
+  margin-left: 0.5rem;
+}
+.signon-store {
+  text-decoration: none;
+}
+.not-have-acc {
+  padding-left: 3rem;
+}
+.signin-seller-container {
+  background-color: rgb(255, 255, 255);
+  margin-top: 4rem;
+  margin-left: 3rem;
+  border-radius: 0.3rem;
+  height: 44rem;
+  width: 40rem;
+}
+.store-input {
+  padding-top: 1rem;
+  padding-left: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  padding: 0.5rem;
+}
+.seller-input {
+  padding: 0.3rem;
+}
+.seller-inputbox {
+  height: 2rem;
+  width: 30rem;
+  outline: none;
+}
+.sign-in-seller {
+  width: 4rem;
+  padding: 0.4rem;
+  margin-bottom: 0.5rem;
+  margin-left: 25rem;
+}
+.signin-customer-container {
+  height: 40rem;
+}
