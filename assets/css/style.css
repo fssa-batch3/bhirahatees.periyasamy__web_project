@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 :root {
-  --nav-color: #2f8f9d;
-  --body-color: #82dbd8;
+  --nav-color: rgb(224, 238, 254);
+  --body-color: rgb(224, 238, 254);
 }
 * {
   margin: 0;
@@ -11,6 +12,7 @@
 body {
   background-color: var(--body-color);
 }
+
 .navbar {
   display: flex;
   background-color: var(--nav-color);
@@ -23,7 +25,7 @@ body {
   padding-left: 3rem;
 }
 .product-logo {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-weight: bold;
   height: 2rem;
   width: 6rem;
@@ -49,6 +51,13 @@ body {
   background-color: rgb(211, 211, 211);
   border: 0.1rem solid rgb(211, 211, 211);
 }
+.content {
+  display: flex;
+}
+.women-cart-gif {
+  height: 35rem;
+  padding-top: 5rem;
+}
 .search {
   height: 1.7rem;
   display: flex;
@@ -69,13 +78,13 @@ body {
   width: 1.5rem;
 }
 .side-bar {
-  background-color: var(--nav-color);
+  background-color: rgb(131, 190, 251);
   width: 15rem;
   display: block;
   height: 100rem;
 }
 .side {
-  color: white;
+  color: black;
   display: block;
   width: 15rem;
   padding: 1.5rem;
@@ -86,7 +95,7 @@ body {
   color: black;
   padding: 1.5rem;
   width: 12rem;
-  background-color: rgb(0, 255, 255);
+  background-color: rgb(80, 139, 200);
 }
 .main-page {
   display: flex;
@@ -94,7 +103,7 @@ body {
 
 .add-items {
   padding: 0.8rem;
-  background-color: rgb(47, 143, 157);
+  background-color: rgb(80, 139, 200);
   color: rgb(255, 255, 255);
   font-weight: 300;
   width: 6.3rem;
@@ -117,7 +126,7 @@ body {
   height: 23rem;
   width: 15rem;
   margin-left: 3rem;
-  background-color: rgb(59, 172, 182);
+  background-color: rgb(131, 190, 251);
   border-radius: 0.2rem;
   margin-bottom: 2.5rem;
 }
@@ -140,12 +149,17 @@ body {
   padding-left: 6rem;
 }
 .revenue {
-  padding-top: 3rem;
+  margin-top: 3rem;
 }
 .revenue,
 .items-left,
 .requires {
-  height: 300px;
+  background-color: rgb(80, 139, 200);
+  height: 15rem;
+  padding: 1rem;
+  width: 65rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
 }
 .image-item {
   height: 15rem;
@@ -178,7 +192,7 @@ body {
   margin: 15rem 0 0 25rem;
   width: 30rem;
   height: 23rem;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(131, 190, 251);
   border-radius: 1rem;
 }
 .bill-heading {
@@ -198,7 +212,7 @@ body {
 .nav-items {
   text-decoration: none;
   padding: 0.7rem;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-weight: bold;
 }
 .nav-items:hover {
@@ -208,23 +222,26 @@ body {
   text-decoration: none;
   padding: 0.5rem;
   font-weight: bold;
-  background-color: #b3e8e5;
+  background-color: rgb(80, 139, 200);
   color: rgb(255, 255, 255);
   border-radius: 0.4rem;
 }
 .signin:hover {
+  background-color: rgb(178, 214, 253);
   color: rgb(0, 0, 0);
-  background-color: rgb(155, 255, 203);
+  border: 2px solid rgb(178, 214, 253);
 }
 .home-heading {
-  padding: 5rem 10rem 10rem 3rem;
-  width: 50rem;
+  padding: 20rem 10rem;
+  padding-bottom: 3rem;
+  padding-right: 0.1rem;
+  width: 40rem;
   color: rgb(255, 255, 255);
   font-size: 1.5rem;
 }
 .home {
-  background-color: rgb(138, 43, 226);
-  height: 25rem;
+  background-color: rgb(131, 190, 251);
+  height: 51.2rem;
 }
 .choices {
   margin-top: 5rem;
@@ -238,8 +255,10 @@ body {
   border: 2px solid rgb(0, 0, 0);
   padding: 3rem;
   padding-top: 3rem;
-  height: 12rem;
 
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(131, 190, 251);
+  height: 12rem;
   border-radius: 3rem;
 }
 .store,
@@ -253,7 +272,8 @@ body {
   padding-left: 15rem;
 }
 .siginin-choice {
-  padding: 1.5rem;
+  padding: 1.7rem;
+  padding-top: 0.7rem;
   font-size: 1.5rem;
 }
 .customer-choice {
@@ -299,7 +319,7 @@ body {
 }
 
 .log-in {
-  background-color: rgb(138, 43, 226);
+  background-color: rgb(80, 139, 200);
   color: rgb(255, 255, 255);
   padding: 0.5rem;
   margin: 1rem;
@@ -309,27 +329,30 @@ body {
 }
 
 .log-in:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(138, 43, 226);
-  border: 0.1rem solid rgb(138, 43, 226);
+  background-color: rgb(178, 214, 253);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(178, 214, 253);
 }
 .login-button {
   text-decoration: none;
+  margin-bottom: 0.1rem;
 }
 .sign-in,
 .explore-more {
   margin: 1rem 0 2rem 5rem;
   text-decoration: none;
   color: rgb(255, 255, 255);
-  background-color: rgb(135, 206, 235);
-  border-radius: 0.2rem;
-  padding: 0.5rem;
+  background-color: rgb(80, 139, 200);
+  border-radius: 0.5rem;
+  margin-left: 10rem;
+  font-size: 1.2rem;
+  padding: 1rem;
 }
 .sign-in:hover,
 .explore-more:hover {
-  background-color: rgb(138, 43, 226);
-  color: rgb(163, 229, 255);
-  border: 2px solid rgb(163, 229, 255);
+  background-color: rgb(224, 238, 254);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(224, 238, 254);
 }
 .explore-more {
   margin: 0;
@@ -342,9 +365,8 @@ body {
   padding-left: 3rem;
 }
 .signin-seller-container {
-  background-color: rgb(255, 255, 255);
-  margin-top: 4rem;
-  margin-left: 3rem;
+  background-color: rgb(148, 197, 249);
+  margin: 3rem 28rem;
   border-radius: 0.3rem;
   height: 44rem;
   width: 40rem;

@@ -7,11 +7,10 @@ let path = "";
 //     console.log(image_input)
 // })
 document.getElementById("add").onclick = function () {
-  addItems(
-    "https://image.api.playstation.com/cdn/EP0001/CUSA09303_00/tzKcptCCUkiigpacybO8xWmvxPS7vIzk.png",
-    "₹1999",
-    "Assasin's Creed Odyssey (Golden Editon)"
-  );
+  let link = window.prompt("Please Upload a link");
+  let cost = window.prompt("Add a Cost");
+  let ItemName = window.prompt("Add a name");
+  addItems(link, cost, ItemName);
   // dialogBox()
   // console.log(image_input.value)
 };
@@ -20,7 +19,7 @@ function addItems(path, itemPrice, name) {
   row.classList.add("items");
   let element = document.getElementById("inventory");
   element.appendChild(row);
-  let itemOfTheImage = image(path);
+  let itemOfTheImage = image(path, name);
   row.appendChild(itemOfTheImage);
   let nameOfItem = itemName(name);
   row.appendChild(nameOfItem);
@@ -61,7 +60,7 @@ function price(priceItem) {
 
 function itemName(str) {
   let nameEl = document.createElement("p");
-  nameEl.classList.add("item-name")
+  nameEl.classList.add("item-name");
   let name = document.createTextNode(str);
   nameEl.appendChild(name);
   return nameEl;
@@ -78,10 +77,11 @@ function stock() {
   return stockEl;
 }
 
-function image(path) {
+function image(path, alt) {
   let image = document.createElement("img");
   image.classList.add("image-item");
   image.setAttribute("src", path);
+  image.setAttribute("src", alt);
   return image;
 }
 function priceAndquantity() {
