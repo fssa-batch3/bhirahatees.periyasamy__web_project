@@ -81,7 +81,7 @@ function image(path, alt) {
   let image = document.createElement("img");
   image.classList.add("image-item");
   image.setAttribute("src", path);
-  image.setAttribute("src", alt);
+  image.setAttribute("alt", alt);
   return image;
 }
 function priceAndquantity() {
