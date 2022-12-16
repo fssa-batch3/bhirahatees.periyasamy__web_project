@@ -23,7 +23,7 @@ function addItems(path, itemPrice, name) {
   row.appendChild(itemOfTheImage);
   let nameOfItem = itemName(name);
   row.appendChild(nameOfItem);
-  let custom_price = price(itemPrice);
+  let custom_price = price(`₹${itemPrice}`);
   row.appendChild(custom_price);
   let stockElement = stock();
   row.appendChild(stockElement);

@@ -103,6 +103,7 @@ body {
   width: 15rem;
   display: block;
   height: 100rem;
+  bottom: 0;
 }
 .side {
   color: black;
@@ -262,7 +263,7 @@ body {
 }
 .home {
   background-color: rgb(131, 190, 251);
-  height: 51.2rem;
+  height: 49.2rem;
 }
 .choices {
   margin-top: 5rem;
