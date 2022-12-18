@@ -95,7 +95,8 @@ function excuter() {
   for (let i = 0; i < 20; i++) {
     addItems(
       "https://image.api.playstation.com/cdn/EP0001/CUSA09303_00/tzKcptCCUkiigpacybO8xWmvxPS7vIzk.png",
-      "₹1999"
+      "1999",
+      "Assasins Creed Orgins (Golden Edition)"
     );
   }
 }
