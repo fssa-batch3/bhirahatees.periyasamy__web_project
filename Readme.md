@@ -1,5 +1,6 @@
 Inventory Management
-I made a Inventory Management for Maintaingm things in store. It's also used to Billing system
+I made a Inventory Management for Maintaing
+things in store. It's also used to Billing system
 
 Project statement
 https://docs.google.com/document/d/1qZrVyMuu5Z1zvaDbz4wQPvd4MxEOXmB4/edit?usp=share_link&ouid=108844068722524050222&rtpof=true&sd=true
