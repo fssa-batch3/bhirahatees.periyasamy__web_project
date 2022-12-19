@@ -197,14 +197,17 @@ body {
 .items-left,
 .requires {
   background-color: rgb(80, 139, 200);
-  height: 25rem;
+  height: 30rem;
   padding: 1rem;
   width: 65rem;
   margin-top: 1rem;
+  margin-bottom: 2rem;
   border-radius: 1rem;
 }
 .graph {
-  height: 22rem;
+  /* filter: invert(6%) sepia(75%) saturate(1051%) hue-rotate(185deg)
+    brightness(83%) contrast(65%); */
+  height: 27rem;
   width: 60rem;
   padding-left: 4%;
 }
@@ -311,7 +314,7 @@ body {
 }
 .home {
   background-color: rgb(131, 190, 251);
-  height: 49.3rem;
+  height: 53.67rem;
 }
 .choices {
   margin-top: 5rem;
@@ -496,4 +499,17 @@ body {
 }
 .item-requirement-container {
   margin: 10rem 20rem;
+}
+.user-requirement {
+  margin: 0.5rem 1rem;
+  color: white;
+}
+.username {
+  padding: 2rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+.require {
+  font-size: 1rem;
+  margin-left: 5rem;
 }
