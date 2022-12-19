@@ -73,11 +73,16 @@ body {
   border: 0.1rem solid #f6f6f6;
 }
 .content {
+  width: 50rem;
   display: flex;
 }
 .women-cart-gif {
   height: 35rem;
   padding-top: 5rem;
+}
+.inventoy-img {
+  padding: 3rem 7rem;
+  height: 20rem;
 }
 .search {
   height: 1.7rem;
@@ -89,6 +94,11 @@ body {
 }
 .logo {
   text-decoration: none;
+}
+.contact {
+  background-color: rgb(156, 199, 255);
+  color: #f6f6f6;
+  height: 25rem;
 }
 .search-box::-webkit-search-cancel-button {
   display: none;
@@ -185,6 +195,7 @@ body {
 .graph {
   height: 22rem;
   width: 60rem;
+  padding-left: 4%;
 }
 .image-item {
   height: 15rem;
@@ -214,7 +225,7 @@ body {
   flex: 1;
 }
 .bill-continer {
-  margin: 15rem 0 0 25rem;
+  margin: 10rem 0 0 25rem;
   width: 30rem;
   height: fit-content;
   background-color: rgb(131, 190, 251);
@@ -267,6 +278,23 @@ body {
   color: rgb(255, 255, 255);
   font-size: 1.5rem;
 }
+.content {
+  font-size: 1.5rem;
+  width: 40rem;
+  padding: 3rem 5rem;
+}
+.about {
+  width: 10rem;
+  height: 49.3rem;
+}
+.about-heading {
+  padding: 5rem 5rem;
+  padding-bottom: 3rem;
+  padding-right: 0.1rem;
+  width: 40rem;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+}
 .home {
   background-color: rgb(131, 190, 251);
   height: 49.3rem;
@@ -277,6 +305,9 @@ body {
 }
 .siginin-heading {
   padding: 20rem;
+}
+.about-container {
+  display: flex;
 }
 .seller,
 .customer {
