@@ -21,9 +21,7 @@ body {
 .price-container {
   padding-left: 4.3rem;
 }
-.foooter {
-  height: 20rem;
-}
+
 .item-heading,
 .quantity-heading,
 .price-of-item,
@@ -39,10 +37,10 @@ body {
 }
 .navbar {
   display: flex;
-  /* position: fixed;
-  /* top: 0;
+  position: fixed;
+  top: 0;
   right: 0;
-  left: 0; */
+  left: 0;
   background-color: var(--nav-color);
   height: 2.5rem;
   padding: 1rem;
@@ -106,7 +104,7 @@ body {
 .contact {
   background-color: rgb(156, 199, 255);
   color: #f6f6f6;
-  height: 15rem;
+  height: 20rem;
 }
 .search-box::-webkit-search-cancel-button {
   display: none;
@@ -121,8 +119,8 @@ body {
   width: 15rem;
   display: block;
   height: 100rem;
-  /* position: fixed;
-  top: 4.5rem; */
+  position: fixed;
+  top: 4.5rem;
 }
 .side {
   color: black;
@@ -186,8 +184,11 @@ body {
 .add-image {
   padding: 30px;
 }
-.home-continer {
+.home-continer,
+#main-container {
   padding-left: 6rem;
+  margin-top: 5rem;
+  margin-left: 10rem;
 }
 .revenue {
   margin-top: 3rem;
@@ -240,6 +241,9 @@ body {
   height: fit-content;
   background-color: rgb(131, 190, 251);
   border-radius: 1rem;
+}
+.bill-continer {
+  margin-left: 35rem;
 }
 .bill-heading {
   padding-top: 2rem;
@@ -441,6 +445,7 @@ body {
   width: 40rem;
 }
 .store-input {
+  margin-top: 7rem;
   padding-top: 1rem;
   padding-left: 4rem;
   display: flex;
@@ -488,4 +493,7 @@ body {
 .credits {
   margin-bottom: 0;
   padding-bottom: 0;
+}
+.item-requirement-container {
+  margin: 10rem 20rem;
 }
