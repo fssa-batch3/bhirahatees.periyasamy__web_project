@@ -176,11 +176,15 @@ body {
 .items-left,
 .requires {
   background-color: rgb(80, 139, 200);
-  height: 15rem;
+  height: 25rem;
   padding: 1rem;
   width: 65rem;
   margin-top: 1rem;
   border-radius: 1rem;
+}
+.graph {
+  height: 22rem;
+  width: 60rem;
 }
 .image-item {
   height: 15rem;
