@@ -2,6 +2,7 @@ let imagePath = [];
 let elements = [];
 let image_input = document.querySelector("#number");
 let path = "";
+let i = 0;
 
 // image_input.addEventListener("change",function(){
 //     console.log(image_input)
@@ -11,12 +12,21 @@ document.getElementById("add").onclick = function () {
   let cost = window.prompt("Add a Cost");
   let ItemName = window.prompt("Add a name");
   addItems(link, cost, ItemName);
+  i++;
+  // console.log(elements, i);
   // dialogBox()
   // console.log(image_input.value)
 };
+let inventory = document.getElementById("inventory");
+inventory.addEventListener("click", function () {
+  let item = document.querySelector(".items");
+  console.log(item.children());
+});
+
 function addItems(path, itemPrice, name) {
   let row = document.createElement("div");
   row.classList.add("items");
+  row.setAttribute("id", `item${i}`);
   let element = document.getElementById("inventory");
   element.appendChild(row);
   let itemOfTheImage = image(path, name);

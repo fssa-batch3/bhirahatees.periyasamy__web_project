@@ -169,6 +169,9 @@ body {
   border-radius: 0.2rem;
   margin-bottom: 2.5rem;
 }
+.items:hover {
+  box-shadow: 0.5rem 0.5rem 1rem rgba(80, 139, 200, 0.9);
+}
 .dialog {
   position: fixed;
   height: 200px;
