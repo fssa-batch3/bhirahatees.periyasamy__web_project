@@ -1,0 +1,145 @@
+@media only screen and (max-width: 767.98px) {
+  .product-logo {
+    font-size: 1.5rem;
+  }
+  .logo-container {
+    flex: 0.5;
+    padding-left: 0;
+    padding-right: 5rem;
+  }
+  .home {
+    height: 35rem;
+  }
+
+  .nav {
+    font-size: 1rem;
+  }
+  .home-heading,
+  .about-heading {
+    width: 20rem;
+    font: 2rem;
+    padding: 10rem 2rem;
+  }
+  .sign-in {
+    margin-left: 2rem;
+  }
+  .about-heading {
+    padding: 2rem 4rem;
+  }
+  .content {
+    padding-left: 4rem;
+    font-size: 1.3rem;
+    width: 30rem;
+  }
+  .login-box {
+    margin: 15rem 5rem;
+    width: 23rem;
+    height: 14rem;
+  }
+  .mail,
+  .pass {
+    font-size: 0.8rem;
+  }
+  .mail-inputbox,
+  .password-inputbox {
+    width: 18rem;
+  }
+  .log-in {
+    margin-left: 17rem;
+  }
+  .choice-container {
+    padding: 1rem 1rem;
+  }
+  .sighin-heading {
+    font-size: 1.2rem;
+  }
+  .choices {
+    margin: 3.2rem 4rem;
+    margin-bottom: 1rem;
+  }
+  .choices-checbox {
+    display: block;
+    padding-right: 5rem;
+    padding-left: 6.5rem;
+  }
+  .signin-seller {
+    padding-left: 0rem;
+  }
+  .signin-seller-container {
+    height: 37rem;
+    width: 25rem;
+    margin: 5rem 3rem;
+  }
+  .store-input {
+    padding-left: 1.5rem;
+  }
+  .seller-inputbox {
+    width: 22rem;
+  }
+  .title {
+    padding: 0.1rem;
+    font-size: 0.8rem;
+  }
+  .signin-customer-container {
+    height: 33rem;
+  }
+  .revenue,
+  .items-left,
+  .requires {
+    height: 20rem;
+    width: 20rem;
+  }
+  .revenue-heading,
+  .items-heading,
+  .requires-heading {
+    font-size: 1rem;
+  }
+  .graph {
+    height: 18rem;
+    width: 18rem;
+  }
+  .require,
+  .username {
+    font-size: 0.8rem;
+  }
+  .bill-continer {
+    margin-left: 7rem;
+    width: 20rem;
+  }
+  .bill-heading {
+    padding-left: 8rem;
+  }
+  .bill-headings {
+    width: 18rem;
+  }
+  .price-container {
+    padding-left: 2rem;
+  }
+  .bill-items {
+    width: 18rem;
+  }
+  .amount {
+    padding-left: 3rem;
+  }
+  .search {
+    width: 13.7rem;
+  }
+  .searchbox {
+    width: 14.3rem;
+  }
+  .item-requirement-container {
+    margin: 10rem 5rem;
+  }
+  .requirement-headning {
+    padding: 2rem;
+    width: 15rem;
+    font-size: 1.5rem;
+  }
+  .requirement-input {
+    padding: 1rem;
+  }
+  .require-inputbox {
+    height: 5rem;
+    width: 20rem;
+  }
+}

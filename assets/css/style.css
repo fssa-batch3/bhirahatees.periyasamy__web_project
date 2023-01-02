@@ -46,7 +46,7 @@ body {
   padding: 1rem;
 }
 .logo-container {
-  flex: 1;
+  flex: 0.5;
   display: flex;
   padding-left: 3rem;
 }
@@ -63,6 +63,7 @@ body {
 }
 
 .nav {
+  font-size: 1.1rem;
   display: flex;
   justify-content: space-evenly;
   flex: 1;
@@ -88,6 +89,9 @@ body {
 .inventoy-img {
   padding: 3rem 7rem;
   height: 20rem;
+}
+.list {
+  list-style: none;
 }
 .search {
   height: 1.7rem;
@@ -116,7 +120,7 @@ body {
 }
 .side-bar {
   background-color: rgb(131, 190, 251);
-  width: 15rem;
+  width: 5rem;
   display: block;
   height: 100rem;
   position: fixed;
@@ -125,15 +129,14 @@ body {
 .side {
   color: black;
   display: block;
-  width: 15rem;
+  width: 2.2rem;
   padding: 1.5rem;
   font-size: 1rem;
   text-decoration: none;
 }
 .side:hover {
   color: black;
-  padding: 1.5rem;
-  width: 12rem;
+  width: 2.2rem;
   background-color: rgb(80, 139, 200);
 }
 .main-page {
@@ -164,6 +167,7 @@ body {
 .items {
   height: 23rem;
   width: 15rem;
+  margin: 0.1rem;
   margin-left: 3rem;
   background-color: rgb(131, 190, 251);
   border-radius: 0.2rem;
@@ -191,7 +195,7 @@ body {
 #main-container {
   padding-left: 6rem;
   margin-top: 5rem;
-  margin-left: 10rem;
+  margin-left: 1rem;
 }
 .revenue {
   margin-top: 3rem;
@@ -276,8 +280,9 @@ body {
 }
 .signin,
 .submit-btn {
+  margin-top: 0.5rem;
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 0.3rem;
   font-weight: bold;
   background-color: rgb(80, 139, 200);
   border: 2px solid rgb(80, 139, 200);
@@ -427,9 +432,18 @@ body {
   font-size: 1.2rem;
   padding: 1rem;
 }
+.demo-signin {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(80, 139, 200);
+  border-radius: 0.5rem;
+  margin-left: 10rem;
+  padding: 0.5rem;
+}
 .sign-in:hover,
-.explore-more:hover {
-  background-color: rgb(224, 238, 254);
+.explore-more:hover,
+.demo-signin:hover {
+  background-color: rgb(199, 213, 229);
   color: rgb(0, 0, 0);
   border: 2px solid rgb(224, 238, 254);
 }
@@ -446,7 +460,7 @@ body {
 .signin-seller-container {
   background-color: rgb(148, 197, 249);
   margin: 3rem 28rem;
-  border-radius: 0.3rem;
+  border-radius: 0.8rem;
   height: 44rem;
   width: 40rem;
 }
@@ -502,7 +516,7 @@ body {
   padding-bottom: 0;
 }
 .item-requirement-container {
-  margin: 10rem 20rem;
+  margin: 5rem 10rem;
 }
 .user-requirement {
   margin: 0.5rem 1rem;
