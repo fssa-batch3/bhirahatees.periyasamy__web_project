@@ -1,45 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Invent - Log In</title>
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/responsive_style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/responsive_style.css" />
+  </head>
+  <body>
     <div class="main-container">
-        <div class="navbar">
-            <div class="logo-container">
-                <a href="../../index.html" class="logo">
-                 <h1 class="product-logo">Invent</h1>
-                 <!-- <img src="" class="product-logo"> -->
-                </a> 
-            </div>
-         </div>
-        <section class="login">
-            <div class="login-box">
-               <div class="mail-container">
-                <div class="mail">
-                    Email address / Phone Number / User Id
-                </div>
-                <div class="mail-container"><input type="mail number" placeholder="Enter Here" class="mail-inputbox"></div>
-               </div>
-               <div class="pass-container">
-                <div class="pass">
-                    Password
-                </div>
-                <div class="pass-container"><input type="password" class="password-inputbox" placeholder="Password"></div>
-               </div><a href="../seller_Pages/main.html" class="login-button">
-                <div class="log-in">Log In</div>
-               </a>
-               <div class="not-have-acc">
-                Doesn't have Account ?<a href="../Signin_login/signin.html">Sign In</a>
-               </div>
-            </div>
-        </section>
+      <div class="navbar">
+        <div class="logo-container">
+          <a href="../../index.html" class="logo">
+            <h1 class="product-logo">Invent</h1>
+            <!-- <img src="" class="product-logo"> -->
+          </a>
         </div>
+      </div>
+      <section class="login">
+        <div class="login-box">
+          <form action="">
+            <div class="mail-container">
+              <div class="mail">Email address / Phone Number / User Id</div>
+              <div class="mail-container">
+                <input
+                  id="mail"
+                  type="mail number"
+                  placeholder="Enter Here"
+                  class="mail-inputbox"
+                />
+              </div>
+            </div>
+            <div class="pass-container">
+              <div class="pass">Password</div>
+              <div class="pass-container">
+                <input
+                  id="password"
+                  type="password"
+                  class="password-inputbox"
+                  placeholder="Password"
+                />
+              </div>
+            </div>
+            <a id="login" href="" class="login-button">
+              <button class="log-in">Log In</button>
+            </a>
+            <div class="not-have-acc">
+              Doesn't have Account ?<a href="../Signin_login/signin.html"
+                >Sign In</a
+              >
+              >
+            </div>
+          </form>
+        </div>
+      </section>
     </div>
-</body>
+  </body>
+  <script>
+    document.getElementById("login").onclick = function () {
+      console.log("passed");
+      let sellerData = JSON.parse(window.localStorage.getItem("seller_login"));
+      let customerData = JSON.parse(
+        window.localStorage.getItem("customer_signin")
+      );
+      let email = document.getElementById("mail").value.toLowerCase();
+      let Password = document.getElementById("password").value;
+      for (let i = 0; i < sellerData.length; i++) {
+        console.log(sellerData[i]);
+        if (
+          email === sellerData[i].email &&
+          Password === sellerData[i].password
+        ) {
+          window.location.href = "../seller_pages/main.html";
+          return alert("Success");
+        }
+      }
+      return alert("failed");
+    };
+  </script>
 </html>

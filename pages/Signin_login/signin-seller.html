@@ -24,6 +24,7 @@
             <div class="title">Shop Name</div>
             <div class="seller-input">
               <input
+                id="store-name"
                 class="seller-inputbox"
                 type="text"
                 placeholder="Enter Shop Name"
@@ -34,6 +35,7 @@
             <div class="title">Seller Name</div>
             <div class="seller-input">
               <input
+                id="seller-name"
                 class="seller-inputbox"
                 type="text"
                 placeholder="Enter Seller Name"
@@ -44,6 +46,7 @@
             <div class="title">Phone Number</div>
             <div class="seller-input">
               <input
+                id="phone-number"
                 class="seller-inputbox"
                 type="number"
                 placeholder="Enter Phone Number"
@@ -54,6 +57,7 @@
             <div class="title">Email Address</div>
             <div class="seller-input">
               <input
+                id="email"
                 class="seller-inputbox"
                 type="email"
                 placeholder="Enter Your Email"
@@ -64,6 +68,7 @@
             <div class="title">Address</div>
             <div class="seller-input">
               <input
+                id="address"
                 class="seller-inputbox address"
                 type="text"
                 placeholder="Enter Shop Addres"
@@ -74,6 +79,7 @@
             <div class="title">Password</div>
             <div class="seller-input">
               <input
+                id="password"
                 class="seller-inputbox"
                 type="password"
                 placeholder="6 - 8 Letters"
@@ -84,15 +90,19 @@
             <div class="title">Confirm Password</div>
             <div class="seller-input">
               <input
+                id="confo-pass"
                 class="seller-inputbox"
                 type="password"
                 placeholder="6 - 8 Letters"
               />
             </div>
           </div>
-          <a href="../seller_Pages/main.html" class="login-button">
-            <div class="log-in sign-in-seller">Sign In</div>
-          </a>
+          <!-- <a href="../seller_Pages/main.html" class="login-button"> -->
+          <button class="log-in sign-in-seller" onclick="submit()">
+            Sign In
+          </button>
+          <!-- <a href=""></a> -->
+          <!-- </a> -->
           <div class="not-have-acc-login-in">
             have a Account ?<a href="../Signin_login/log-in.html">Log In</a>
           </div>
@@ -100,4 +110,27 @@
       </div>
     </div>
   </body>
+  <script>
+    let arr = [];
+    function submit() {
+      let obj = new Object();
+      obj["storeName"] = document.getElementById("store-name").value;
+      obj["sellerName"] = document.getElementById("seller-name").value;
+      obj["phoneNumber"] = document.getElementById("phone-number").value;
+      obj["email"] = document.getElementById("email").value.toLowerCase();
+      obj["address"] = document.getElementById("address").value;
+      obj["password"] = document.getElementById("password").value;
+      obj["conformPassword"] = document.getElementById("confo-pass").value;
+      arr.push(obj);
+      if (window.localStorage.getItem("seller_login") === null) {
+        window.localStorage.setItem("seller_login", JSON.stringify(arr));
+      } else {
+        let local = window.localStorage.getItem("seller_login");
+        let json = JSON.parse(local);
+        json.push(obj);
+        window.localStorage.setItem("seller_login", JSON.stringify(json));
+      }
+      // console.log(window.localStorage.getItem("seller_login"));
+    }
+  </script>
 </html>
