@@ -59,6 +59,7 @@
   </body>
   <script>
     document.getElementById("login").onclick = function () {
+      let arr = [];
       console.log("passed");
       let sellerData = JSON.parse(window.localStorage.getItem("seller_login"));
       let customerData = JSON.parse(
@@ -72,6 +73,8 @@
           email === sellerData[i].email &&
           Password === sellerData[i].password
         ) {
+          arr.push(sellerData[i]);
+          window.localStorage.setItem("user_data", JSON.stringify(arr));
           window.location.href = "../seller_pages/main.html";
           return alert("Success");
         }

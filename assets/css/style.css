@@ -536,3 +536,49 @@ body {
   font-size: 1rem;
   margin-left: 5rem;
 }
+.profile-card {
+  background-color: rgb(146, 192, 241);
+  margin: 15% 30%;
+  height: 23rem;
+  width: 40rem;
+  border-radius: 1rem;
+}
+.name-card {
+  display: flex;
+}
+.name-card {
+  padding: 2rem 1rem 1.5rem 1rem;
+}
+#name-value,
+#shopname-value,
+#email-value,
+#address-value,
+#phone-value,
+#pass-value {
+  background-color: rgb(199, 222, 246);
+  border: 2px solid rgb(199, 222, 246);
+  margin-left: 1rem;
+}
+#email-value {
+  width: 30rem;
+}
+#address-value {
+  margin-left: 0;
+  width: 29.8rem;
+}
+#name-value:focus.shopname-value,
+#email-value:focus,
+#address-value:focus,
+#phone-value:focus,
+#pass-value:focus {
+  outline: none;
+}
+.contact-card {
+  padding-left: 1rem;
+}
+.address-card {
+  padding: 3rem 1rem;
+}
+.change-card {
+  display: flex;
+}

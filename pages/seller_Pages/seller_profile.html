@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/responsive_style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo-container">
+          <a href="../../index.html" class="logo">
+            <h1 class="product-logo">Invent</h1>
+            <!-- <img src="" class="product-logo"> -->
+          </a>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="profile-card">
+        <div class="name-card">
+          <div class="name-card">
+            <label for="username">Name : </label>
+            <input type="text" id="name-value" />
+          </div>
+          <div class="name-card">
+            <label for="storename">Shop Name : </label>
+            <input type="text" id="shopname-value" />
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card">
+            <label for="contact-email">email : </label>
+            <input type="text" id="email-value" />
+          </div>
+        </div>
+        <div class="address-card">
+          <div class="contact-card">
+            <label for="contact-address">address : </label>
+            <input type="text" id="address-value" />
+          </div>
+        </div>
+        <div class="change-card">
+          <div class="contact-card">
+            <label for="contact-phone">phone : </label>
+            <input type="text" id="phone-value" />
+          </div>
+          <div class="contact-card">
+            <label for="contact-address">Change Password</label> 
+            <input type="password" id="pass-value" />
+          </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    let user_data = JSON.parse(window.localStorage.getItem("user_data"));
+    console.log(user_data["sellerName"])
+     document.getElementById("name-value").value = user_data[0]["sellerName"] ;
+     document.getElementById("shopname-value").value = user_data[0]["storeName"] ;
+     document.getElementById("email-value").value = user_data[0]["email"] ;
+     document.getElementById("address-value").value = user_data[0]["address"] ;
+     document.getElementById("phone-value").value = user_data[0]["phoneNumber"]
+     document.getElementById("pass-value").value = user_data[0]["password"]
+  </script>
+</html>
