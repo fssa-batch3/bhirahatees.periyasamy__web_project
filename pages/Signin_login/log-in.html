@@ -26,30 +26,31 @@
               <div class="mail-container">
                 <input
                   id="mail"
-                  type="mail number"
+                  type="email"
                   placeholder="Enter Here"
                   class="mail-inputbox"
                 />
               </div>
             </div>
             <div class="pass-container">
-              <div class="pass">Password</div>
+              <div class="pass pass-container">Password</div>
               <div class="pass-container">
                 <input
                   id="password"
                   type="password"
                   class="password-inputbox"
                   placeholder="Password"
+                  pattern=".{8,}"
+                  title="Enter a password"
                 />
               </div>
             </div>
-            <a id="login" href="" class="login-button">
+            <div id="login" href="" class="login-button">
               <button class="log-in">Log In</button>
-            </a>
+            </div>
             <div class="not-have-acc">
               Doesn't have Account ?<a href="../Signin_login/signin.html"
                 >Sign In</a
-              >
               >
             </div>
           </form>
@@ -58,9 +59,10 @@
     </div>
   </body>
   <script>
-    document.getElementById("login").onclick = function () {
+    document.getElementById("login").onclick = () => {
+      // e.preventDefault();
       let arr = [];
-      console.log("passed");
+      // console.log("passed");
       let sellerData = JSON.parse(window.localStorage.getItem("seller_login"));
       let customerData = JSON.parse(
         window.localStorage.getItem("customer_signin")
@@ -73,8 +75,8 @@
           email === sellerData[i].email &&
           Password === sellerData[i].password
         ) {
-          arr.push(sellerData[i]);
-          window.localStorage.setItem("user_data", JSON.stringify(arr));
+          let data = sellerData[i];
+          window.localStorage.setItem("user_data", JSON.stringify(data));
           window.location.href = "../seller_pages/main.html";
           return alert("Success");
         }

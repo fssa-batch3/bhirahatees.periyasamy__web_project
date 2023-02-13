@@ -56,6 +56,10 @@ body {
   height: 2rem;
   width: 6rem;
 }
+#invalid {
+  color: red;
+  margin-left: 0.2rem;
+}
 .logo {
   height: 1.8rem;
   width: 1.8rem;
@@ -466,8 +470,14 @@ body {
   background-color: rgb(148, 197, 249);
   margin: 3rem 28rem;
   border-radius: 0.8rem;
-  height: 44rem;
+  height: fit-content;
   width: 40rem;
+}
+input:valid {
+  border: 2px solid green;
+}
+input:invalid {
+  border: 2px solid red;
 }
 .store-input {
   margin-top: 7rem;

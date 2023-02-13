@@ -20,87 +20,96 @@
       </div>
       <div class="signin-seller-container">
         <div class="store-input">
-          <div>
-            <div class="title">Shop Name</div>
-            <div class="seller-input">
-              <input
-                id="store-name"
-                class="seller-inputbox"
-                type="text"
-                placeholder="Enter Shop Name"
-              />
+          <form action="">
+            <div>
+              <div class="title">Shop Name</div>
+              <div class="seller-input">
+                <input
+                  id="store-name"
+                  class="seller-inputbox"
+                  type="text"
+                  placeholder="Enter Shop Name"
+                />
+              </div>
             </div>
-          </div>
-          <div>
-            <div class="title">Seller Name</div>
-            <div class="seller-input">
-              <input
-                id="seller-name"
-                class="seller-inputbox"
-                type="text"
-                placeholder="Enter Seller Name"
-              />
+            <div>
+              <div class="title">Seller Name</div>
+              <div class="seller-input">
+                <input
+                  id="seller-name"
+                  class="seller-inputbox"
+                  type="text"
+                  pattern="[a-zA-Z0-9]+"
+                  placeholder="Enter Seller Name"
+                />
+              </div>
             </div>
-          </div>
-          <div>
-            <div class="title">Phone Number</div>
-            <div class="seller-input">
-              <input
-                id="phone-number"
-                class="seller-inputbox"
-                type="number"
-                placeholder="Enter Phone Number"
-              />
+            <div>
+              <div class="title">Phone Number</div>
+              <div class="seller-input">
+                <input
+                  id="phone-number"
+                  class="seller-inputbox"
+                  type="number"
+                  pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}"
+                  maxlength="10"
+                  placeholder="Enter Phone Number"
+                />
+              </div>
             </div>
-          </div>
-          <div>
-            <div class="title">Email Address</div>
-            <div class="seller-input">
-              <input
-                id="email"
-                class="seller-inputbox"
-                type="email"
-                placeholder="Enter Your Email"
-              />
+            <div>
+              <div class="title">
+                Email Address
+                <div id="invalid"></div>
+              </div>
+              <div class="seller-input">
+                <input
+                  id="email"
+                  class="seller-inputbox"
+                  type="email"
+                  placeholder="Enter Your Email"
+                />
+              </div>
             </div>
-          </div>
-          <div>
-            <div class="title">Address</div>
-            <div class="seller-input">
-              <input
-                id="address"
-                class="seller-inputbox address"
-                type="text"
-                placeholder="Enter Shop Addres"
-              />
+            <div>
+              <div class="title">Address</div>
+              <div class="seller-input">
+                <input
+                  id="address"
+                  pattern="[a-zA-Z0-9]+"
+                  class="seller-inputbox address"
+                  type="text"
+                  placeholder="Enter Shop Addres"
+                />
+              </div>
             </div>
-          </div>
-          <div>
-            <div class="title">Password</div>
-            <div class="seller-input">
-              <input
-                id="password"
-                class="seller-inputbox"
-                type="password"
-                placeholder="6 - 8 Letters"
-              />
+            <div>
+              <div class="title">Password</div>
+              <label class="seller-input">
+                <input
+                  id="password"
+                  class="seller-inputbox"
+                  type="password"
+                  pattern=".{8,}"
+                  placeholder="6 - 8 Letters"
+                />
+              </label>
             </div>
-          </div>
-          <div>
-            <div class="title">Confirm Password</div>
-            <div class="seller-input">
-              <input
-                id="confo-pass"
-                class="seller-inputbox"
-                type="password"
-                placeholder="6 - 8 Letters"
-              />
+            <div>
+              <div class="title">Confirm Password</div>
+              <div class="seller-input">
+                <input
+                  id="confo-pass"
+                  class="seller-inputbox"
+                  type="password"
+                  pattern=".{8,}"
+                  placeholder="6 - 8 Letters"
+                />
+              </div>
             </div>
-          </div>
-          <!-- <a href="../seller_Pages/main.html" class="login-button"> -->
-          <button class="log-in sign-in-seller" onclick="submit()">
-            Sign In
-          </button>
+            <!-- <a href="../seller_Pages/main.html" class="login-button"> -->
+            <button id="log-in" class="log-in sign-in-seller">Sign In</button>
+          </form>
           <!-- <a href=""></a> -->
           <!-- </a> -->
           <div class="not-have-acc-login-in">
@@ -112,26 +121,47 @@
   </body>
   <script>
     let arr = [];
-    function submit() {
+    let local = JSON.parse(window.localStorage.getItem("seller_login"));
+    let validation = false;
+
+    document.getElementById("log-in").onclick = function () {
       let obj = new Object();
-      obj["storeName"] = document.getElementById("store-name").value;
-      obj["sellerName"] = document.getElementById("seller-name").value;
-      obj["phoneNumber"] = document.getElementById("phone-number").value;
-      obj["email"] = document.getElementById("email").value.toLowerCase();
-      obj["address"] = document.getElementById("address").value;
-      obj["password"] = document.getElementById("password").value;
-      obj["conformPassword"] = document.getElementById("confo-pass").value;
-      arr.push(obj);
-      if (window.localStorage.getItem("seller_login") === null) {
-        window.localStorage.setItem("seller_login", JSON.stringify(arr));
-      } else {
-        let local = window.localStorage.getItem("seller_login");
-        let json = JSON.parse(local);
-        json.push(obj);
-        window.localStorage.setItem("seller_login", JSON.stringify(json));
+      if (
+        document.getElementById("password").value !==
+        document.getElementById("confo-pass").value
+      ) {
+        alert("Password is not match");
       }
-      window.location.href = "../seller_pages/main.html";
-      // console.log(window.localStorage.getItem("seller_login"));
-    }
+      obj["storeName"] = document.getElementById("store-name").value.trim();
+      obj["sellerName"] = document.getElementById("seller-name").value.trim();
+      obj["phoneNumber"] = document.getElementById("phone-number").value.trim();
+      obj["email"] = document
+        .getElementById("email")
+        .value.trim()
+        .toLowerCase();
+      obj["address"] = document.getElementById("address").value.trim();
+      obj["password"] = document.getElementById("password").value.trim();
+      obj["conformPassword"] = document
+        .getElementById("confo-pass")
+        .value.trim();
+      if (local !== null) {
+        validation = local.find((o) => o["email"] === obj["email"]);
+      }
+      console.log(validation);
+      arr.push(obj);
+      if (validation) {
+        return alert("invalid Email");
+      } else {
+        if (local === null) {
+          window.localStorage.setItem("seller_login", JSON.stringify(arr));
+          window.location.href = "../seller_pages/main.html";
+        } else {
+          let json = local;
+          json.push(obj);
+          window.localStorage.setItem("seller_login", JSON.stringify(json));
+          window.location.href = "../seller_pages/main.html";
+        }
+      }
+    };
   </script>
 </html>
