@@ -108,7 +108,7 @@
               </div>
             </div>
             <!-- <a href="../seller_Pages/main.html" class="login-button"> -->
-            <button id="log-in" class="log-in sign-in-seller">Sign In</button>
+            <button id="sign-in" class="log-in sign-in-seller">Sign In</button>
           </form>
           <!-- <a href=""></a> -->
           <!-- </a> -->
@@ -124,7 +124,7 @@
     let local = JSON.parse(window.localStorage.getItem("seller_login"));
     let validation = false;
 
-    document.getElementById("log-in").onclick = function () {
+    document.getElementById("sign-in").onclick = function () {
       let obj = new Object();
       if (
         document.getElementById("password").value !==

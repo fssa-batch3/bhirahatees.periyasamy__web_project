@@ -24,35 +24,38 @@
         <div class="name-card">
           <div class="name-card">
             <label for="username">Name : </label>
-            <input type="text" id="name-value" disabled />
+            <input type="text" id="name-value" required />
           </div>
           <div class="name-card">
             <label for="storename">Shop Name : </label>
-            <input type="text" id="shopname-value" disabled />
+            <input type="text" id="shopname-value" required />
           </div>
         </div>
         <div class="contact-card">
           <div class="contact-card">
             <label for="contact-email">email : </label>
-            <input type="text" id="email-value" disabled />
+            <input type="text" id="email-value" required/>
           </div>
         </div>
         <div class="address-card">
           <div class="contact-card">
             <label for="contact-address">address : </label>
-            <input type="text" id="address-value" disabled />
+            <input type="text" id="address-value" required/>
           </div>
         </div>
         <div class="change-card">
           <div class="contact-card">
             <label for="contact-phone">phone : </label>
-            <input type="text" id="phone-value" disabled />
+            <input type="number" id="phone-value" required/>
           </div>
           <div class="contact-card">
-            <button class="pass-value" id="edit-profile">Edit Profile</button>
-            <button class="pass-value" id="delete-profile">Delete Profile</button>
+            <label for="contact-address">Change Password</label> 
+            <input type="password" pattern=".{8,}" id="pass-value" />
           </div>
-      </div>
+         </div>
+      <div class="contact-card">
+            <button class="edit" id="save">Save</button>
+          </div>
     </section>
   </body>
   <script>
@@ -64,20 +67,29 @@
     document.getElementById("email-value").value = local["email"]
     document.getElementById("address-value").value = local["address"]
     document.getElementById("phone-value").value = local["phoneNumber"]
-    document.getElementById("edit-profile").onclick = ()=>{
-      window.location.href = "./edit-profile.html"
-    }
-    document.getElementById('delete-profile').onclick = () =>{
-      let confirm = window.prompt("Do you want to delete your account ?(type in caps)")
-      if(confirm === "YES"){
-      let rmvData = data.splice(data.indexOf(local),1)
-      window.localStorage.setItem("seller_login",JSON.stringify(data))
-      window.localStorage.removeItem("userEmail")
-      window.location.href = "../../index.html"
-    }else{
-      alert("confirmation failed")
-    }
-  }
+    document.getElementById("pass-value").value = local["password"]
+      document.getElementById("save").onclick = ()=>{
+        let obj = new Object()
+        obj["storeName"] = document.getElementById("shopname-value").value;
+        obj["sellerName"] =  document.getElementById("name-value").value
+        obj["email"] =  document.getElementById("email-value").value
+        obj["address"] =  document.getElementById("address-value").value
+        obj["phoneNumber"] =  document.getElementById("phone-value").value
+        obj["password"] =  document.getElementById("pass-value").value
+        if(obj["email"] === null){
+          return alert("Please Enter the email")
+        }else{
+         let localData = Object.assign(local,obj)
+         let dataIndex = data.indexOf(local)
+         console.log(dataIndex)
+         data[dataIndex] = localData
+         window.localStorage.setItem("seller_login",JSON.stringify(data))
+         window.localStorage.setItem("userEmail",obj["email"])
+         alert("success fully updated")
+         window.location.href = "./seller_profile.html"
+        }
+      } 
+   
     
   </script>
 </html>

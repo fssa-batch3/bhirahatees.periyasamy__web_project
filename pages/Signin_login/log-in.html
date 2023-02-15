@@ -45,8 +45,8 @@
                 />
               </div>
             </div>
-            <div id="login" href="" class="login-button">
-              <button class="log-in">Log In</button>
+            <div href="" class="login-button">
+              <button class="log-in" id="login">Log In</button>
             </div>
             <div class="not-have-acc">
               Doesn't have Account ?<a href="../Signin_login/signin.html"
@@ -64,19 +64,14 @@
       let arr = [];
       // console.log("passed");
       let sellerData = JSON.parse(window.localStorage.getItem("seller_login"));
-      let customerData = JSON.parse(
-        window.localStorage.getItem("customer_signin")
-      );
       let email = document.getElementById("mail").value.toLowerCase();
       let Password = document.getElementById("password").value;
       for (let i = 0; i < sellerData.length; i++) {
-        console.log(sellerData[i]);
         if (
           email === sellerData[i].email &&
           Password === sellerData[i].password
         ) {
-          let data = sellerData[i];
-          window.localStorage.setItem("user_data", JSON.stringify(data));
+          window.localStorage.setItem("userEmail", email);
           window.location.href = "../seller_pages/main.html";
           return alert("Success");
         }
