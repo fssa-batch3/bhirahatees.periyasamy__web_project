@@ -70,15 +70,22 @@
           </a>
         </div>
         <div id="main-container">
-          <div class="add-items" id="add" onclick="createCard()">
-            Add Items +
-          </div>
+          <div class="add-items" id="add" onclick="listCard()">Add Items +</div>
           <div id="inventory"></div>
         </div>
       </div>
     </div>
   </body>
-  <script src="../../assets/js/script.js">
-    createCard()
+  <script type="text/javascript" src="../../assets/js/script.js">
+      function dialogBox(path, price, quantity, uuid) {
+      let dialog = document.createElement("dialog");
+      dialog.classList.add("dialog");
+      return dialog;
+    }
+        document.querySelector("items").addEventListener("click",(e)=>{
+          e.preventDefault()
+
+        })
   </script>
+  <script></script>
 </html>

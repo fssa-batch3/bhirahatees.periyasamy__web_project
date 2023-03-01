@@ -176,8 +176,10 @@ body {
   background-color: rgb(131, 190, 251);
   border-radius: 0.2rem;
   margin-bottom: 2.5rem;
+  /* transition: width 1s; */
 }
 .items:hover {
+  /* width: 30rem; */
   box-shadow: 0.5rem 0.5rem 1rem rgba(80, 139, 200, 0.9);
 }
 .dialog {
@@ -187,6 +189,13 @@ body {
   width: 400px;
   background-color: rgb(212, 212, 212);
   left: 600px;
+}
+.price-container {
+  padding-left: 0;
+  margin-left: 0;
+}
+.uuid {
+  padding-left: 1rem;
 }
 .stock {
   padding: 0.3rem 1rem;
@@ -299,7 +308,7 @@ body {
   border-radius: 0.4rem;
 }
 .sign-in-btn {
-  padding: 0em 0.5rem;
+  padding: 0em 1rem;
   margin: 0;
 }
 .signin:hover,

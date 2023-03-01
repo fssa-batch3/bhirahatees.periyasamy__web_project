@@ -67,7 +67,7 @@
     document.getElementById("edit-profile").onclick = ()=>{
       window.location.href = "./edit-profile.html"
     }
-    document.getElementById('delete-profile').onclick = () =>{
+   document.getElementById('delete-profile').onclick = () =>{
       let confirm = window.prompt("Do you want to delete your account ?(type in caps)")
       if(confirm === "YES"){
       let rmvData = data.splice(data.indexOf(local),1)

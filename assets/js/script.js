@@ -12,33 +12,37 @@ let local;
 
 // calling all funtion and creating a object
 
-function createCard() {
+function listCard() {
+  let uuid = Date.now();
   let ItemName = window.prompt("Add a name");
   let link = window.prompt("Please Upload a link");
   let quantity = window.prompt("How Many Items Do You Want To add ?");
   let cost = window.prompt("Add a Cost");
   if (ItemName !== "" && link !== "" && quantity !== NaN && cost !== NaN) {
     let object = new Object();
+    object["itemId"] = uuid;
     object["name"] = ItemName;
     object["quantity"] = parseInt(quantity);
     object["cost"] = parseInt(cost);
     object["image"] = link;
     object["alt"] = ItemName;
+
     json.push(object);
-    addItems(link, cost, ItemName, quantity);
+    createCard(link, cost, ItemName, quantity, uuid);
     elements.push(ItemName, quantity, cost);
   }
-  console.log(json);
-  //  3 dialogBox();
+  // console.log(json);
+  dialogBox();
   // console.log(image_input.value);
   i = 0;
   window.localStorage.setItem("items", JSON.stringify(json));
+  return uuid;
 }
 //creating the container
 
 let i = 0;
 
-function addItems(path, itemPrice, name, quantity) {
+function createCard(path, itemPrice, name, quantity, uid) {
   let row = document.createElement("div");
   row.classList.add("items");
   let element = document.getElementById("inventory");
@@ -47,20 +51,51 @@ function addItems(path, itemPrice, name, quantity) {
   row.appendChild(itemOfTheImage);
   let nameOfItem = itemName(name);
   row.appendChild(nameOfItem);
+  let div = document.createElement("div");
+  div.classList.add("price-container");
   let custom_price = price(`₹${itemPrice}`);
-  row.appendChild(custom_price);
+  div.appendChild(custom_price);
   let stockElement = stock(quantity);
-  row.appendChild(stockElement);
+  div.appendChild(stockElement);
+  let uuid = document.createElement("p");
+  uuid.classList.add("uuid");
+  uuid.innerText = uid;
+  div.appendChild(uuid);
+  row.appendChild(div);
   elements.push(row);
   //eventlistner to find the which element we click
   row.addEventListener("click", (e) => {
     e.preventDefault();
-    let storageObj = new Object();
-    storageObj["name"] = name;
-    storageObj["quantity"] = i;
-    storageObj["price"] = itemPrice;
-    selectedItem.push(storageObj);
-    window.localStorage.setItem("select", JSON.stringify(stringData));
+    if (
+      window.prompt(
+        "Do You Want to edit the cost and quantity ? (Type Yes)"
+      ) === "YES"
+    ) {
+      let itemData = JSON.parse(window.localStorage.getItem("items"));
+      let quantity = window.prompt("How Many Items Do You Want To add ?");
+      let cost = window.prompt("Add a Cost");
+      let custom_price = price(`₹${cost}`);
+      document.querySelector(".price-container").remove();
+      row.appendChild(custom_price);
+      let stockElement = stock(quantity);
+      row.appendChild(stockElement);
+      let uuid = document.createElement("p");
+      uuid.classList.add("uuid");
+      uuid.innerText = uid;
+      row.appendChild(uuid);
+      let obj = itemData.find((data) => data["itemId"] === uid);
+      let index = itemData.indexOf(obj);
+      itemData.splice(index, 1);
+      let object = new Object();
+      object["itemId"] = uid;
+      object["name"] = obj["name"];
+      object["quantity"] = obj["quantity"];
+      object["cost"] = obj["cost"];
+      object["image"] = obj["link"];
+      object["alt"] = obj["name"];
+      itemData.push(object);
+      window.localStorage.setItem("items", JSON.stringify(itemData));
+    }
   });
 }
 
@@ -69,16 +104,9 @@ function addItems(path, itemPrice, name, quantity) {
 function dialogBox() {
   let dialog = document.createElement("dialog");
   dialog.classList.add("dialog");
-  // let inputbox = document.createElement("input");
-  // inputbox.setAttribute("type", "file");
-  // inputbox.setAttribute("accept", "image/png image/jpg");
-  // inputbox.setAttribute("id", "add-image");
-  // dialog.appendChild(inputbox);
-  // // let pricInput = document.createElement()
-  let el = document.getElementById("main-container");
-  dialog.show();
-  el.appendChild(dialog);
+  return dialog;
 }
+//
 
 //adding price
 
@@ -158,3 +186,6 @@ function excuter(object) {
     );
   }
 }
+
+// deleting module
+function deleteModule(arrofObj, statement) {}
